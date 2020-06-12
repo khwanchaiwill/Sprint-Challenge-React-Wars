@@ -18,36 +18,36 @@ const Characters = ()=>{
             console.log('👻 Something wrong that guide you come to see me' )
         })
     }, [])
-const makeStyle = (w, h, m) =>{
+const makeStyle = (w, b, m) =>{
   return {
       div: {
           width: w,
-          height: h,
           margin: m,
+      },
+      button: {
+        width: w,
+        borderRadius: b,
+        margin: m,
       }
   }
-}
-   
+} 
     return (
         <div className="card">
             {
                 characters.map((cha) =>{
                     return (
                     <CardDiv> 
-                        <div style={makeStyle('40', 'auto', '0 5%')} >
-                         <h1  className="character">{cha.name}</h1>     
-                        </div>                     
-                        <div>
-                         <button className="birth-year"> {cha.birth_year} </button>     
-                        </div>    
-                                 
+                        <div style={makeStyle('60%', '0 5%').div} >
+                            <h1 className="character">{cha.name}</h1>       
+                        </div>               
+                            <button style={makeStyle('100px',' 0px 30px 0px 30px ', '1.7% 0').button} > {cha.birth_year} </button>                     
                     </CardDiv>
-                     
+                        
                     
                     )
                 })
             }
-  
+
         </div>
         
     )

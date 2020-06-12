@@ -27,20 +27,24 @@ const [newCharacther, setCharacters] = useState([])
       console.log('Woohoo you see me again')
     })
   }, [])
+  const makeStyleApp = (s)=>{
+    return {
+      h1: {
+        fontSize: s,
+      }
+    }
+  }
   return (
-    <div className="App">
-    <h1 className="Header">React Wars <span className="opentag"> > </span>
-      </h1>
-           
-    <CardDiv> 
+  
+      <div className="App">
+        <h1 style={makeStyleApp('4rem').h1} className="Header">React Wars 
+        <span className="opentag"> > </span>
+        </h1>  
       
-      <Characters key={props.index} name={props.name} birth_year={props.birth_year}/>
-      </CardDiv>   
-        
-            
-   
-    
-    </div>
+      <div>
+        <Characters key={props.index} name={props.name} birth_year={props.birth_year}/>
+      </div>              
+    </div> 
   );
  
 }
