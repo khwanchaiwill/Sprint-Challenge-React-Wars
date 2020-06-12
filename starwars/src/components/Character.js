@@ -38,7 +38,7 @@ const makeStyle = (w, b, m) =>{
                     return (
                     <CardDiv> 
                         <div style={makeStyle('60%', '0 5%').div} >
-                            <h1 className="character">{cha.name}</h1>       
+                    <h1 className="character">{cha.name}</h1>       
                         </div>               
                             <button style={makeStyle('100px',' 0px 30px 0px 30px ', '1.7% 0').button} > {cha.birth_year} </button>                     
                     </CardDiv>

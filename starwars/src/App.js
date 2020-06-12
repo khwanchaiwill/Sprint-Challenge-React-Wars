@@ -7,7 +7,6 @@ import CardDiv from './stylesheet/Characterstyle'
 const App = (props) => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
-   const {characters} = props
 const [newCharacther, setCharacters] = useState([])
 
  
@@ -21,7 +20,7 @@ const [newCharacther, setCharacters] = useState([])
     axios.get('https://swapi.py4e.com/api/people/')
     .then(res =>{
       setCharacters(res.data.results)
-      console.log(res.data)
+      console.log(res.data.results)
     })
     .catch(err =>{
       console.log('Woohoo you see me again')
@@ -39,10 +38,10 @@ const [newCharacther, setCharacters] = useState([])
       <div className="App">
         <h1 style={makeStyleApp('4rem').h1} className="Header">React Wars 
         <span className="opentag"> > </span>
-        </h1>  
-      
+        </h1>
+              
       <div>
-        <Characters key={props.index} name={props.name} birth_year={props.birth_year}/>
+        <Characters name={props.name} birth_year={props.birth_year}/>
       </div>              
     </div> 
   );
